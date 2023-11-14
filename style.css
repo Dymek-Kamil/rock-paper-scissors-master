@@ -1,13 +1,122 @@
 :root {
   --scissors-gradient: linear-gradient(hsl(39, 89%, 49%) hsl(40, 84%, 53%));
   --paper-gradient: linear-gradient(hsl(230, 89%, 62%) hsl(230, 89%, 65%));
-  --rock-gradient: linear-gradient(hsl(349, 71%, 52%) hsl(349, 70%, 56%));
+  --rock-gradient: linear-gradient(
+    to bottom,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
   --lizard-gradient: linear-gradient(hsl(261, 73%, 60%) hsl(261, 72%, 63%));
   --dark-text: hsl(229, 25%, 31%);
   --score-text: hsl(229, 64%, 46%);
   --header-outline: hsl(217, 16%, 45%);
-  --background: radial-gradient(hsl(214, 47%, 23%) hsl(237, 49%, 15%));
+  --background: radial-gradient(
+    ellipse at top,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
 }
 * {
   margin: 0;
+  font-size: 25px;
+  font-family: "Barlow Semi Condensed";
+  box-sizing: border-box;
+}
+body {
+  background-image: var(--background);
+  height: 100vh;
+}
+header {
+  height: 25%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  height: 75%;
+  width: 50%;
+  border: 4px solid var(--header-outline);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav--h1 {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav--h1 h1 {
+  color: white;
+  line-height: 0.8;
+  font-size: 1.8rem;
+}
+.score {
+  width: 20%;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.score--title {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  font-style: bold;
+  color: var(--score-text);
+}
+.score--score {
+  font-size: 2.2rem;
+  color: var(--dark-text);
+}
+.main {
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main--triangle {
+  height: 80%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.option {
+  cursor: pointer;
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, lightgray, white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.option img {
+  height: 80px;
+  width: 80px;
+}
+.rock {
+  border: 30px solid hsl(349, 71%, 52%);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.paper {
+  left: 20%;
+  top: 5%;
+}
+.scissors {
+  left: 50%;
+  top: 5%;
+}
+.btn {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
 }
