@@ -37,8 +37,12 @@
       </nav>
     </header>
     <main class="main">
-      <section class="main--triangle">
-        <img src="images/bg-triangle.svg" alt="" />
+      <section class="options--container">
+        <img
+          src="images/bg-triangle.svg"
+          alt="triangle"
+          class="img img--triangle"
+        />
         <div class="option paper">
           <img src="images/icon-paper.svg" alt="paper" />
         </div>
@@ -51,5 +55,14 @@
       </section>
       <div class="btn btn--rules">RULES</div>
     </main>
+    <section class="rules hidden">
+      <div class="rules--container">
+        <h2 class="rules--title">RULES</h2>
+        <span class="btn btn--close">&times;</span>
+      </div>
+      <img src="images/image-rules.svg" alt="rules" class="rules--img" />
+    </section>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
   </body>
 </html>
