@@ -142,6 +142,7 @@ header {
   align-items: center;
 }
 .btn--replay {
+  cursor: pointer;
   height: 50px;
   width: 200px;
   background-color: white;
@@ -176,6 +177,20 @@ header {
   background-color: hsl(235, 39%, 17%);
   position: relative;
   top: -25%;
+}
+.final--option {
+  left: 0px;
+  top: -15%;
+  bottom: 0px;
+  right: 0px;
+  transform: translate(0, 0);
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+.final--option img {
+  height: 120px;
+  width: 120px;
 }
 .btn--rules {
   cursor: pointer;
