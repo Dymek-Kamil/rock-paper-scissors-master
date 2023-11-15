@@ -56,7 +56,7 @@ header {
 .nav--h1 h1 {
   color: white;
   line-height: 0.8;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .score {
   width: 20%;
@@ -85,7 +85,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-.options--container {
+.section {
   height: 80%;
   width: 50%;
   position: relative;
@@ -128,6 +128,54 @@ header {
   border: 30px solid yellow;
   right: 20%;
   top: -7%;
+}
+
+.final--container {
+  display: flex;
+}
+.final__section--result {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn--replay {
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  font-size: 0.6rem;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
+.final__section--result h1 {
+  font-size: 2rem;
+  color: white;
+}
+.final--section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.final--section h3 {
+  color: white;
+  letter-spacing: 3px;
+}
+.computer__section--circle {
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  background-color: hsl(235, 39%, 17%);
+  position: relative;
+  top: -25%;
 }
 .btn--rules {
   cursor: pointer;
@@ -188,4 +236,5 @@ header {
 .hidden {
   visibility: hidden;
   opacity: 0;
+  display: none;
 }

@@ -37,20 +37,33 @@
       </nav>
     </header>
     <main class="main">
-      <section class="options--container">
+      <section class="section options--container">
         <img
           src="images/bg-triangle.svg"
           alt="triangle"
           class="img img--triangle"
         />
-        <div class="option paper">
+        <div class="option paper" data-choice="paper">
           <img src="images/icon-paper.svg" alt="paper" />
         </div>
-        <div class="option scissors">
+        <div class="option scissors" data-choice="scissors">
           <img src="images/icon-scissors.svg" alt="scissors" />
         </div>
-        <div class="option rock">
+        <div class="option rock" data-choice="rock">
           <img src="images/icon-rock.svg" alt="rock" />
+        </div>
+      </section>
+      <section class="section final--container hidden">
+        <div class="player--section final--section">
+          <h3>YOU PICKED</h3>
+        </div>
+        <div class="final__section--result hidden">
+          <h1>YOU LOSE</h1>
+          <div class="btn btn--replay">PLAY AGAIN</div>
+        </div>
+        <div class="computer--section final--section">
+          <h3>THE HOUSE PICKED</h3>
+          <div class="computer__section--circle"></div>
         </div>
       </section>
       <div class="btn btn--rules">RULES</div>
