@@ -108,7 +108,7 @@ header {
   height: 230px;
   width: 230px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, lightgray, white);
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,7 +129,7 @@ header {
   top: -7%;
 }
 .scissors {
-  border: 30px solid yellow;
+  border: 30px solid hsl(39, 89%, 49%);
   right: 20%;
   top: -7%;
 }
