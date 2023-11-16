@@ -64,6 +64,7 @@ const draw = function () {
 optContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".option");
 
+  // If clicked anywhere else don't do
   if (!clicked) return;
 
   const choice = clicked.dataset.choice;
@@ -71,6 +72,7 @@ optContainer.addEventListener("click", function (e) {
   optContainer.classList.add("hidden");
   finalContainer.classList.remove("hidden");
 
+  // Adding player choice
   playerSection.insertAdjacentHTML(
     "beforeend",
     `<div class="option ${choice} final--option">
@@ -78,6 +80,7 @@ optContainer.addEventListener("click", function (e) {
 </div>`
   );
 
+  // Adding computer choice
   const computerTime = setTimeout(
     function (choice) {
       computerSectionCircle.classList.add("hidden");
@@ -92,6 +95,7 @@ optContainer.addEventListener("click", function (e) {
     computerChoice
   );
 
+  // Game logic
   const result = setTimeout(
     function (playerChoice, computerChoice) {
       if (playerChoice === "paper") {
@@ -116,6 +120,8 @@ optContainer.addEventListener("click", function (e) {
     computerChoice
   );
 });
+
+// Replay button
 
 btnReplay.addEventListener("click", function () {
   resultContainer.classList.add("hidden");
