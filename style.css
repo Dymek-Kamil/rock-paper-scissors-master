@@ -28,6 +28,7 @@
 body {
   background-image: var(--background);
   height: 100vh;
+  overflow: hidden;
 }
 header {
   height: 30%;
