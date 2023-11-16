@@ -16,6 +16,8 @@ const computerSectionCircle = document.querySelector(
 const resultContainer = document.querySelector(".final__section--result");
 const resultTitle = document.querySelector(".final__section--result h1");
 const score = document.querySelector(".score--score");
+const playerWin = document.querySelector(".player--win");
+const computerWin = document.querySelector(".computer--win");
 
 // Opening Modal window
 btnRules.addEventListener("click", function () {
@@ -46,10 +48,12 @@ const win = function () {
   let scoreNum = Number(score.textContent);
   scoreNum++;
   score.textContent = scoreNum;
+  playerWin.classList.remove("hidden");
 };
 const lose = function () {
   resultTitle.textContent = "YOU LOSE";
   btnReplay.style.color = "red";
+  computerWin.classList.remove("hidden");
 };
 const draw = function () {
   resultTitle.textContent = "DRAW";
@@ -117,9 +121,11 @@ btnReplay.addEventListener("click", function () {
   resultContainer.classList.add("hidden");
   optContainer.classList.remove("hidden");
   finalContainer.classList.add("hidden");
-  computerSectionCircle.remove("hidden");
+  computerSectionCircle.classList.remove("hidden");
   document.querySelectorAll(".final--option").forEach((opt) => {
     opt.remove();
   });
-  return (computerChoice = computerChossing());
+  computerWin.classList.add("hidden");
+  playerWin.classList.add("hidden");
+  computerChoice = computerChossing();
 });

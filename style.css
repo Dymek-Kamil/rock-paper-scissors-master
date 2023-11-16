@@ -1,6 +1,9 @@
 :root {
   --scissors-gradient: linear-gradient(hsl(39, 89%, 49%) hsl(40, 84%, 53%));
-  --paper-gradient: linear-gradient(hsl(230, 89%, 62%) hsl(230, 89%, 65%));
+  --paper-gradient: linear-gradient(
+    to right,
+    hsl(230, 89%, 62%) hsl(230, 89%, 65%)
+  );
   --rock-gradient: linear-gradient(
     to bottom,
     hsl(349, 71%, 52%),
@@ -120,7 +123,7 @@ header {
   transform: translateX(-50%);
 }
 .paper {
-  border: 30px solid blue;
+  border: 30px solid hsl(230, 89%, 65%);
   left: 20%;
   top: -7%;
 }
@@ -129,7 +132,32 @@ header {
   right: 20%;
   top: -7%;
 }
-
+.winner {
+  border-radius: 50%;
+  height: 800px;
+  width: 800px;
+  background: rgba(255, 255, 255, 0.01);
+  position: absolute;
+  top: -20%;
+}
+.b {
+  height: 75%;
+  width: 75%;
+  background: rgba(255, 255, 255, 0.05);
+  position: absolute;
+}
+.c {
+  height: 50%;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+}
+.b,
+.c {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 .final--container {
   display: flex;
 }
@@ -153,6 +181,7 @@ header {
   align-items: center;
   letter-spacing: 3px;
   border-radius: 10px;
+  z-index: 10;
 }
 .final__section--result h1 {
   font-size: 2rem;
